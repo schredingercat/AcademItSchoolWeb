@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Первая страница</title>
+</head>
+
+<body>
+    <div>
+        <p>Текст</p>
+        <form action="secondPage.html">
+            <div>
+                <label for="textInput">Однострочное поле ввода</label>
+                <input type="text" id="textInput" name="textInput" placeholder="Введите текст" />
+            </div>
+
+            <div>
+                <label for="textArea">Многострочное поле ввода</label>
+                <textarea id="textArea" name="textArea" placeholder="Введите текст"></textarea>
+            </div>
+
+            <div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="checkBox1" name="checkBox1" value="1">
+                        Чекбокс 1
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" id="checkBox2" name="checkBox2" value="2" checked>
+                        Чекбокс 2
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <input type="radio" value="1" id="radioButton1" name="radioButton" checked>
+                    <label for="radioButton1">Вариант 1</label>
+                </div>
+
+                <div>
+                    <input type="radio" value="2" id="radioButton2" name="radioButton">
+                    <label for="radioButton2">Вариант 2</label>
+                </div>
+
+                <div>
+                    <input type="radio" value="3" id="radioButton3" name="radioButton">
+                    <label for="radioButton3">Вариант 3</label>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label>Настройка 1</label>
+                    <select name="select1">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                        <option>Пункт 4</option>
+                        <option>Пункт 5</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Настройка 2</label>
+                    <select name="select2" multiple="true">
+                        <option>Пункт 1</option>
+                        <option>Пункт 2</option>
+                        <option>Пункт 3</option>
+                        <option>Пункт 4</option>
+                        <option>Пункт 5</option>
+                    </select>
+                </div>
+
+                <button type="submit">На вторую страницу</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
