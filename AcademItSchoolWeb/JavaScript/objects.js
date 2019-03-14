@@ -22,7 +22,8 @@ var countries = [{
         { name: "New York", population: 8008278 },
         { name: "Los Angeles", population: 3694820 },
         { name: "Chicago", population: 2896016 },
-        { name: "Houston", population: 1953631 }]
+        { name: "Houston", population: 1953631 },
+        { name: "San Diego", population: 1223400 }]
 },
 {
     name: "Finland",
@@ -31,17 +32,27 @@ var countries = [{
         { name: "Espoo", population: 213271 }]
 }];
 
-function getMaxCitiesCountry(countries) {
-    return countries.reduce(function (result, current) { return result.cities.length > current.cities.length ? result : current });
+function getMaxCitiesCountries(countries) {
+    var maxCitiesCount = countries.reduce(function (result, current) {
+        return Math.max(result, current.cities.length);
+    }, 0);
+
+    return countries.filter(function (country) {
+        return country.cities.length === maxCitiesCount;
+    });
 }
 
-var countryWithMaxCities = getMaxCitiesCountry(countries);
-console.log(`\nСтрана с наибольшим количеством городов: ${countryWithMaxCities.name} - ${countryWithMaxCities.cities.length}`);
+var countriesWithMaxCities = getMaxCitiesCountries(countries);
+
+console.log("\nСтран" + (countriesWithMaxCities.length > 1 ? "ы" : "а") + " с наибольшим количеством городов:");
+countriesWithMaxCities.forEach(function (country) {
+    console.log(country.name + " - " + country.cities.length);
+});
 
 function getPopulationInCountries(countries) {
-
     var populations = {};
-    countries.forEach(country => {
+
+    countries.forEach(function (country) {
         populations[country.name] = country.cities.reduce(function (result, current) {
             return result + current.population;
         }, 0);
@@ -54,6 +65,6 @@ console.log("\nНаселение стран:");
 var populations = getPopulationInCountries(countries);
 for (var propName in populations) {
     if (populations.hasOwnProperty(propName)) {
-        console.log(`${propName} - ${populations[propName]}`);
+        console.log(propName + " - " + populations[propName]);
     }
 }
