@@ -24,6 +24,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HTML(2)", "HTML\", "{8E14F0
 		SlnRelativePath = "HTML\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "JavaScript", "JavaScript\", "{47A5A600-FEDB-449A-9837-701DECFA8071}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65059"
+		Debug.AspNetCompiler.PhysicalPath = "JavaScript\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65059\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65059"
+		Release.AspNetCompiler.PhysicalPath = "JavaScript\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65059\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65059"
+		SlnRelativePath = "JavaScript\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +52,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8E14F032-6965-47D4-8210-9FA90F2AC234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E14F032-6965-47D4-8210-9FA90F2AC234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A5A600-FEDB-449A-9837-701DECFA8071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A5A600-FEDB-449A-9837-701DECFA8071}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
