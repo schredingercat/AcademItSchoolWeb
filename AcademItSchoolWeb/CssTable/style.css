@@ -1,23 +1,27 @@
-.main{
+.main {
     background-color: #feeed6;
     color: #646464;
     padding: 10px;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;    
+    font-size: 16px;
 }
 
-.header{
-    font-size: 24px;
-    font-family: inherit;
-    margin: 0px 0px 5px;
-    text-transform: uppercase;
+table {
+    border-collapse: collapse;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-.text-blue{
-    color: #378db2;
+tr, td {
+    border: 1px solid #d2d2d2;
+    padding: 5px;
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
     font-weight: bold;
 }
 
-.text-through{
-    text-decoration: line-through;
+tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
 }
