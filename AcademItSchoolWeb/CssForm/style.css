@@ -1,15 +1,46 @@
-.main {
-    background-color: #feeed6;
-    color: #646464;
-    padding: 10px;
+body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
+    color: #646464;
+}
+
+.main {
+    background-color: #feeed6;
+    padding: 10px;
+    display: inline-block;
 }
 
 .header {
     font-size: 24px;
     font-family: inherit;
-    margin: 0px 0px 5px;
+    margin: 0 0 5px;
+}
+
+.label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.input {
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    width: 800px;
+}
+
+.note {
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.button {
+    background: #378db2;
+    color: white;
+    border: 0;
+    padding: 10px;
+    float: right;
 }
 
 .text-blue {

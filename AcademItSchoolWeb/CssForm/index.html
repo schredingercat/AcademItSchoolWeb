@@ -8,36 +8,38 @@
 </head>
 
 <body>
+    <h3 class="header">Отправить заявку</h3>
     <div class="main">
         <form>
-            <h3 class="header">Отправить заявку</h3>
             <div>
                 <div>
-                    <label for="nameTextInput">Ваше имя</label>
+                    <label class="label" for="nameTextInput">Ваше имя</label>
                 </div>
                 <div>
-                    <input type="text" id="nameTextInput" name="nameTextInput" placeholder="Ваше имя *" />
+                    <input class="input" type="text" id="nameTextInput" name="nameTextInput" placeholder="Ваше имя *" />
                 </div>
                 <div>
-                    <label for="numberTextInput">Ваш номер телефона</label>
+                    <label class="label" for="numberTextInput">Ваш номер телефона</label>
                 </div>
                 <div>
-                    <input type="text" id="numberTextInput" name="numberTextInput" placeholder="Ваш номер телефона *" />
+                    <input class="input" type="text" id="numberTextInput" name="numberTextInput" placeholder="Ваш номер телефона *" />
                 </div>
                 <div>
-                    <label for="emailTextInput">Ваш email или VK</label>
+                    <label class="label" for="emailTextInput">Ваш email или VK</label>
                 </div>
                 <div>
-                    <input type="text" id="emailTextInput" name="emailTextInput" placeholder="Ваш email или VK *" />
+                    <input class="input" type="text" id="emailTextInput" name="emailTextInput" placeholder="Ваш email или VK *" />
                 </div>
                 <div>
-                    <label for="commentTextArea">Комментарий</label>
+                    <label class="label" for="commentTextArea">Комментарий</label>
                 </div>
                 <div>
-                    <input id="commentTextArea" name="commentTextArea" placeholder="Комментарий (не обязательно)" />
+                    <textarea class="input" id="commentTextArea" name="commentTextArea" placeholder="Комментарий (не обязательно)"></textarea>
                 </div>
-                <label>Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</label>
-                <button type="submit">Отправить заявку</button>
+                <div>
+                    <label class="note">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</label>
+                </div>
+                <button class="button" type="submit">Отправить заявку</button>
 
             </div>
         </form>
