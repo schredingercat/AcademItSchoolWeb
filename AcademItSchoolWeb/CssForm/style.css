@@ -1,0 +1,22 @@
+.main {
+    background-color: #feeed6;
+    color: #646464;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    font-size: 24px;
+    font-family: inherit;
+    margin: 0px 0px 5px;
+}
+
+.text-blue {
+    color: #378db2;
+    font-weight: bold;
+}
+
+.text-through {
+    text-decoration: line-through;
+}
