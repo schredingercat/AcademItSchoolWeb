@@ -63,6 +63,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CssText", "CssText\", "{D8B
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49662"
+		SlnRelativePath = "CssText\"
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CssTable", "CssTable\", "{925DB7A5-754D-403D-9E0D-CBBCEE54F43B}"
@@ -83,6 +84,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CssTable", "CssTable\", "{9
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49663"
+		SlnRelativePath = "CssTable\"
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CssForm", "CssForm\", "{BCD9793B-5E55-475A-82E9-F85E0F96C22E}"
@@ -103,6 +105,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CssForm", "CssForm\", "{BCD
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52090"
+		SlnRelativePath = "CssForm\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TempConverter", "TempConverter\", "{19A0AF73-C56D-4D71-9675-83994DBDDC26}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54420"
+		Debug.AspNetCompiler.PhysicalPath = "TempConverter\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54420\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54420"
+		Release.AspNetCompiler.PhysicalPath = "TempConverter\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54420\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54420"
+		SlnRelativePath = "TempConverter\"
 	EndProjectSection
 EndProject
 Global
@@ -120,6 +144,8 @@ Global
 		{925DB7A5-754D-403D-9E0D-CBBCEE54F43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD9793B-5E55-475A-82E9-F85E0F96C22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCD9793B-5E55-475A-82E9-F85E0F96C22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A0AF73-C56D-4D71-9675-83994DBDDC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A0AF73-C56D-4D71-9675-83994DBDDC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
