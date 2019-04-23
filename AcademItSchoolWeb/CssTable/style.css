@@ -1,27 +1,21 @@
-.main {
-    background-color: #feeed6;
+.table {
     color: #646464;
-    padding: 10px;
+    border-collapse: collapse;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
-table {
-    border-collapse: collapse;
-    font-family: Helvetica, Arial, sans-serif;
+.table td {
+        border: 1px solid #d2d2d2;
+        padding: 5px;
 }
 
-tr, td {
-    border: 1px solid #d2d2d2;
-    padding: 5px;
-}
-
-thead {
+.thead {
     background-color: #3498db;
     color: white;
     font-weight: bold;
 }
 
-tbody tr:nth-child(odd) {
+.tbody tr:nth-child(odd) {
     background-color: #eeeeee;
 }

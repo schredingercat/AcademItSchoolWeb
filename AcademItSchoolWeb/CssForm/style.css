@@ -1,38 +1,41 @@
-body {
+.container {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #646464;
+    width: 640px;
+    margin: 0 auto;
 }
 
 .main {
     background-color: #feeed6;
-    padding: 10px;
-    display: inline-block;
+    padding: 5px 15px 15px;
 }
 
 .header {
     font-size: 24px;
     font-family: inherit;
-    margin: 0 0 5px;
+    margin: 5px 15px;
 }
 
 .label {
     font-weight: bold;
-    display: inline-block;
     margin-top: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .input {
     padding: 5px;
     font-family: inherit;
     font-size: inherit;
-    width: 800px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.note {
-    font-size: 14px;
-    display: inline-block;
-    margin: 5px 0;
+.textarea {
+    min-height: 25px;
+    resize: vertical;
+    height: 135px;
 }
 
 .button {
@@ -41,13 +44,10 @@ body {
     border: 0;
     padding: 10px;
     float: right;
-}
-
-.text-blue {
-    color: #378db2;
+    font-size: inherit;
     font-weight: bold;
 }
 
-.text-through {
-    text-decoration: line-through;
+.spacer {
+    clear: both;
 }
