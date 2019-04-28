@@ -3,25 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Перевод температуры</title>
 </head>
 
 <body>
-    <div>
-        <p>Перевод температуры</p>
+    <div class="main">
+        <h3 class="header">Перевод температуры</h3>
         <div>
-            <label class="label" for="nameTextInput">Введите температуру в °C</label>
+            <label class="label" for="tempTextInput">Введите температуру</label>
         </div>
         <div>
-            <input class="input" type="text" id="nameTextInput" name="nameTextInput" placeholder="температура" />
+            <input class="input" type="text" id="tempTextInput" name="nameTextInput" placeholder="температура" />
+            <span>°C</span>
         </div>
         <div>
-            <button class="convert-button" type="button">Конвертировать</button>
+            <button class="convert-button" id="convertButton" type="button">Конвертировать</button>
+        </div>
+        
+        <div id="output">
+            <p class="label" id="result"></p>
         </div>
 
     </div>
-    <script src="convert.js"></script>
+    <script src="convert.js" charset="UTF-8"></script>
 </body>
 
 </html>

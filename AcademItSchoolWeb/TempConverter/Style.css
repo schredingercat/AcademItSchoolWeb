@@ -1,7 +1,32 @@
-﻿.convert-button {
+﻿p {
+    margin: 5px 15px;
+}
+
+.main {
+    padding: 10px;
+}
+
+.header {
+    font-size: 24px;
+    font-family: inherit;
+    margin: 5px 15px;
+}
+
+.label {
+    margin: 5px 15px;
+    display: inline-block;
+}
+
+.input {
+    margin: 5px 15px;
+}
+
+
+.convert-button {
     background: #378db2;
     color: white;
     border: 0;
     padding: 10px;
     font-weight: bold;
+    margin: 5px 15px;
 }

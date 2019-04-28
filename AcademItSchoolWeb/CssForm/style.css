@@ -19,8 +19,7 @@
 
 .label {
     font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 5px 15px;
     display: inline-block;
 }
 
