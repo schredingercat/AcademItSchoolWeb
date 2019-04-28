@@ -13,6 +13,16 @@
     text-transform: uppercase;
 }
 
+p {
+    margin: 10px;
+    line-height: 1.25;
+    text-align: justify;
+}
+
+.general-text {
+    text-indent: 20px;
+}
+
 .text-blue {
     color: #378db2;
     font-weight: bold;
