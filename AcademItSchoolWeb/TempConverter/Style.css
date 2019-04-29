@@ -1,26 +1,27 @@
-﻿p {
-    margin: 5px 15px;
-}
-
-.main {
-    padding: 10px;
+﻿.main {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 25px;
+    background: aliceblue;
 }
 
 .header {
     font-size: 24px;
     font-family: inherit;
-    margin: 5px 15px;
+    margin: 10px 0;
 }
 
 .label {
-    margin: 5px 15px;
+    margin: 15px 0 5px;
     display: inline-block;
 }
 
-.input {
-    margin: 5px 15px;
+.output {
+    font-weight: bold;
 }
 
+.input {
+    padding: 5px;
+}
 
 .convert-button {
     background: #378db2;
@@ -28,5 +29,9 @@
     border: 0;
     padding: 10px;
     font-weight: bold;
-    margin: 5px 15px;
+    margin: 15px 0;
+}
+
+.convert-button:hover {
+    background-color: #55cdcd;
 }
