@@ -1,4 +1,6 @@
 .main {
+    max-width: 740px;
+    margin: auto;
     background-color: #feeed6;
     color: #646464;
     padding: 10px;
@@ -9,17 +11,16 @@
 .header {
     font-size: 24px;
     font-family: inherit;
-    margin: 0 0 5px;
     text-transform: uppercase;
 }
 
-p {
-    margin: 10px;
+.text {
+    margin: 10px 0 0;
     line-height: 1.25;
     text-align: justify;
 }
 
-.general-text {
+.text-with-indent {
     text-indent: 20px;
 }
 
