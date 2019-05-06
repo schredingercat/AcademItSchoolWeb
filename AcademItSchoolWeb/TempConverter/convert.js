@@ -19,10 +19,19 @@ function ready() {
             return;
         }
 
-        result.innerText = celsiusValue + "°С = " + Math.round((celsiusValue + 273.15) * 100) / 100 + "K = " + Math.round((1.8 * celsiusValue + 32) * 100) / 100 + "°F";
+        var outputString = celsiusValue + "°С = " + convertCtoK(celsiusValue).toFixed(2) + "K = " + convertCtoF(celsiusValue).toFixed(2) + "°F";
+        result.innerText = outputString;
     };
 
     button.addEventListener("click", convertTemperature);
+}
+
+var convertCtoK = function (celsiusValue) {
+    return celsiusValue + 273.15;
+}
+
+var convertCtoF = function (celsiusValue) {
+    return 1.8 * celsiusValue + 32;
 }
 
 document.addEventListener("DOMContentLoaded", ready);
