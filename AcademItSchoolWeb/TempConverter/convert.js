@@ -26,12 +26,12 @@ function ready() {
     button.addEventListener("click", convertTemperature);
 }
 
-var convertCtoK = function (celsiusValue) {
-    return celsiusValue + 273.15;
-}
+var convertCtoK = function(celsiusValue) {
+	return celsiusValue + 273.15;
+};
 
-var convertCtoF = function (celsiusValue) {
-    return 1.8 * celsiusValue + 32;
-}
+var convertCtoF = function(celsiusValue) {
+	return 1.8 * celsiusValue + 32;
+};
 
 document.addEventListener("DOMContentLoaded", ready);
