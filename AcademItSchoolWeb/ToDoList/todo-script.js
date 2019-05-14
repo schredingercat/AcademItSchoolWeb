@@ -2,7 +2,7 @@
 
 $(function () {
 
-    $(".add-button").on("click", function (e) {
+    $(".add-button").on("click", function () {
 
         var input = $(".input-text");
         if (input.val().trim().length !== 0) {
@@ -13,7 +13,7 @@ $(function () {
                 + "</div></div>");
             $(".todo-list").append(insert);
 
-            $(".removeButton").on("click", function (e) {
+            $(".removeButton").on("click", function () {
                 var note = $(this).parent().parent();
                 removeNote(note);
             });
