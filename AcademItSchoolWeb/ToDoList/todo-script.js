@@ -24,7 +24,7 @@ $(function () {
 
     $(".bd-example-modal-lg").on("show.bs.modal", function (e) {
         var elementId = e.relatedTarget.dataset.uniqueid;
-        alert(elementId);
+        //alert(elementId);
     });
 
 });
