@@ -24,8 +24,29 @@ $(function () {
 
     $(".bd-example-modal-lg").on("show.bs.modal", function (e) {
         var elementId = e.relatedTarget.dataset.uniqueid;
-        //alert(elementId);
+        var originalTextInput = $("#" + elementId)[0];
+        var text = originalTextInput.innerHTML;
+
+        var textInput = $(".change-text");
+        textInput.val(text);
+
+        $(".save-button").on("click",
+            function () {
+                $("#" + elementId)[0].innerHTML = $(textInput).val();
+                $(".bd-example-modal-lg").modal('hide');
+                //$(".save-button").off("click");
+            });
     });
+
+    $(".bd-example-modal-lg").on("hide.bs.modal",
+        function () {
+            $(".save-button").off("click");
+        });
+
+    $(".cancel-button").on("click",
+        function () {
+            $(".bd-example-modal-lg").modal('hide');
+        });
 
 });
 

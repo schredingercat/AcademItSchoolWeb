@@ -27,10 +27,17 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Заголовок</h5>
+                        <h5 class="modal-title">Изменить запись</h5>
                     </div>
                     <div class="modal-body">
-                        <input type="text" placeholder="Введите текст задачи" aria-label="Введите текст задачи" />
+                        <div class="input-group mt-3 mb-3">
+                            <input type="text" class="form-control change-text" placeholder="Введите текст задачи" aria-label="Введите текст задачи" aria-describedby="basic-addon2"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-primary save-button" type="button">Сохранить</button>
+                                <button class="btn btn-outline-primary cancel-button" type="button">Отмена</button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="modal-footer">
 
