@@ -9,7 +9,7 @@ $(function () {
             var guid = getNewGuid();
             var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" + guid + "'>" + input.val() + "</div>"
                 + "<div class='btn-group' role='group'>"
-                + "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-example-modal-lg' data-uniqueid='" + guid + "'><i class='fas fa-edit'></i></button>"
+                + "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" + guid + "'><i class='fas fa-edit'></i></button>"
                 + "<button type='button' class='btn btn-outline-danger removeButton'><i class='fas fa-trash-alt'></i></button>"
                 + "</div></div>");
             $(".todo-list").append(insert);
@@ -22,30 +22,32 @@ $(function () {
         input.val("");
     });
 
-    $(".bd-example-modal-lg").on("show.bs.modal", function (e) {
+    $(".bd-modal-lg").on("show.bs.modal", function (e) {
         var elementId = e.relatedTarget.dataset.uniqueid;
-        var originalTextInput = $("#" + elementId)[0];
-        var text = originalTextInput.innerHTML;
+        var text = $("#" + elementId)[0].innerHTML;
 
         var textInput = $(".change-text");
         textInput.val(text);
 
         $(".save-button").on("click",
             function () {
-                $("#" + elementId)[0].innerHTML = $(textInput).val();
-                $(".bd-example-modal-lg").modal('hide');
-                //$(".save-button").off("click");
+                if (textInput.val().trim().length !== 0) {
+                    $("#" + elementId)[0].innerHTML = textInput.val();
+                    $(".bd-modal-lg").modal('hide');
+                } else {
+                    textInput.val("");
+                }
             });
     });
 
-    $(".bd-example-modal-lg").on("hide.bs.modal",
+    $(".bd-modal-lg").on("hide.bs.modal",
         function () {
             $(".save-button").off("click");
         });
 
     $(".cancel-button").on("click",
         function () {
-            $(".bd-example-modal-lg").modal('hide');
+            $(".bd-modal-lg").modal('hide');
         });
 
 });
