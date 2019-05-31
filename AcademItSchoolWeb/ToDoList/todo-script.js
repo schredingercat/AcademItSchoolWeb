@@ -5,7 +5,7 @@ $(function () {
         var input = $(".input-text");
         if (input.val().trim().length !== 0) {
             var guid = getNewGuid();
-            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" + guid + "'>" + input.val() + "</div>"
+            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" + guid + "'>" + encodeHtml(input.val()) + "</div>"
                 + "<div class='btn-group' role='group'>"
                 + "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" + guid + "'><i class='fas fa-edit'></i></button>"
                 + "<button type='button' class='btn btn-outline-danger removeButton'><i class='fas fa-trash-alt'></i></button>"
@@ -22,7 +22,7 @@ $(function () {
 
     $(".bd-modal-lg").on("show.bs.modal", function (e) {
         var elementId = e.relatedTarget.dataset.uniqueid;
-        var text = $("#" + elementId)[0].innerHTML;
+        var text = $("#" + elementId).text();
 
         var textInput = $(".change-text");
         textInput.val(text);
@@ -30,7 +30,7 @@ $(function () {
         $(".save-button").on("click",
             function () {
                 if (textInput.val().trim().length !== 0) {
-                    $("#" + elementId)[0].innerHTML = textInput.val();
+                    $("#" + elementId)[0].innerHTML = encodeHtml(textInput.val());
                     $(".bd-modal-lg").modal('hide');
                 } else {
                     textInput.val("");
@@ -58,3 +58,7 @@ var getNewGuid = function () {
     }
     return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
 };
+
+function encodeHtml(value) {
+    return $('<textarea/>').text(value).html();
+}
