@@ -1,9 +1,7 @@
 ﻿"use strict";
 
 $(function () {
-
     $(".add-button").on("click", function () {
-
         var input = $(".input-text");
         if (input.val().trim().length !== 0) {
             var guid = getNewGuid();
@@ -40,15 +38,13 @@ $(function () {
             });
     });
 
-    $(".bd-modal-lg").on("hide.bs.modal",
-        function () {
-            $(".save-button").off("click");
-        });
+    $(".bd-modal-lg").on("hide.bs.modal", function () {
+        $(".save-button").off("click");
+    });
 
-    $(".cancel-button").on("click",
-        function () {
-            $(".bd-modal-lg").modal('hide');
-        });
+    $(".cancel-button").on("click", function () {
+        $(".bd-modal-lg").modal('hide');
+    });
 
 });
 
