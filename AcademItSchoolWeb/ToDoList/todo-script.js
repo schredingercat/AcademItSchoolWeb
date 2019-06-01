@@ -11,28 +11,36 @@ $(function () {
 
         if (input.val().trim().length !== 0) {
             var guid = getNewGuid();
-            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" +
-                guid +
-                "'>" +
-                encodeHtml(input.val()) +
-                "</div>" +
+            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'>" +
+                "<div id='" + guid + "'>" + encodeHtml(input.val()) + "</div>" +
                 "<div class='btn-group' role='group'>" +
-                "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" +
-                guid +
-                "' title='Изменить'><i class='fas fa-edit'></i></button>" +
-                "<button type='button' class='btn btn-outline-danger removeButton' title='Удалить'><i class='fas fa-trash-alt'></i></button>" +
+                "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" + guid + "' title='Изменить'><i class='fas fa-edit'></i></button>" +
+                "<button type='button' class='btn btn-outline-danger removeButton' data-toggle='modal' data-target='.del-confirm-bd-modal-lg' data-uniqueid='" + guid + "' title='Удалить'><i class='fas fa-trash-alt'></i></button>" +
                 "</div></div>");
             $(".todo-list").append(insert);
-
-            $(".removeButton").on("click",
-                function () {
-                    $(this).parent().parent().remove();
-                });
         } else {
             input.addClass("is-invalid");
             $(".add-validation-error").removeClass("d-none");
         }
         input.val("");
+    });
+
+    $(".del-confirm-bd-modal-lg").on("show.bs.modal", function (e) {
+        var elementId = $(e.relatedTarget).data("uniqueid");
+        var note = $("#" + elementId).parent();
+
+        $(".delete-button").on("click", function () {
+            $(note).remove();
+            $(".del-confirm-bd-modal-lg").modal("hide");
+        });
+    });
+
+    $(".del-confirm-bd-modal-lg").on("hide.bs.modal", function () {
+        $(".delete-button").off("click");
+    });
+
+    $(".cancel-delete-button").on("click", function () {
+        $(".del-confirm-bd-modal-lg").modal("hide");
     });
 
     var textInput = $(".change-text");
@@ -65,7 +73,7 @@ $(function () {
         $(".save-button").off("click");
     });
 
-    $(".cancel-button").on("click", function () {
+    $(".edit-cancel-button").on("click", function () {
         $(".bd-modal-lg").modal("hide");
     });
 
