@@ -3,28 +3,46 @@
 $(function () {
     $(".add-button").on("click", function () {
         var input = $(".input-text");
+
+        input.keyup(function () {
+            input.removeClass("is-invalid");
+            $(".add-validation-error").addClass("d-none");
+        });
+
         if (input.val().trim().length !== 0) {
             var guid = getNewGuid();
-            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" + guid + "'>" + encodeHtml(input.val()) + "</div>"
-                + "<div class='btn-group' role='group'>"
-                + "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" + guid + "' title='Изменить'><i class='fas fa-edit'></i></button>"
-                + "<button type='button' class='btn btn-outline-danger removeButton' title='Удалить'><i class='fas fa-trash-alt'></i></button>"
-                + "</div></div>");
+            var insert = $("<div class='row justify-content-between pl-3 pr-3 pt-1 pb-1'><div id='" +
+                guid +
+                "'>" +
+                encodeHtml(input.val()) +
+                "</div>" +
+                "<div class='btn-group' role='group'>" +
+                "<button type='button' class='btn btn-outline-primary' data-toggle='modal' data-target='.bd-modal-lg' data-uniqueid='" +
+                guid +
+                "' title='Изменить'><i class='fas fa-edit'></i></button>" +
+                "<button type='button' class='btn btn-outline-danger removeButton' title='Удалить'><i class='fas fa-trash-alt'></i></button>" +
+                "</div></div>");
             $(".todo-list").append(insert);
 
-            $(".removeButton").on("click", function () {
-                $(this).parent().parent().remove();
-            });
+            $(".removeButton").on("click",
+                function () {
+                    $(this).parent().parent().remove();
+                });
+        } else {
+            input.addClass("is-invalid");
+            $(".add-validation-error").removeClass("d-none");
         }
         input.val("");
     });
+
+    var textInput = $(".change-text");
 
     $(".bd-modal-lg").on("show.bs.modal", function (e) {
         var elementId = $(e.relatedTarget).data("uniqueid");
         var text = $("#" + elementId).text();
 
-        var textInput = $(".change-text");
-        textInput.val(text);
+        textInput.val(text).removeClass("is-invalid");
+        $(".edit-validation-error").addClass("d-none");
 
         $(".save-button").on("click",
             function () {
@@ -32,9 +50,15 @@ $(function () {
                     $("#" + elementId).html(encodeHtml(textInput.val()));
                     $(".bd-modal-lg").modal("hide");
                 } else {
-                    textInput.val("");
+                    textInput.val("").addClass("is-invalid");
+                    $(".edit-validation-error").removeClass("d-none");
                 }
             });
+    });
+
+    textInput.keyup(function () {
+        textInput.removeClass("is-invalid");
+        $(".edit-validation-error").addClass("d-none");
     });
 
     $(".bd-modal-lg").on("hide.bs.modal", function () {
